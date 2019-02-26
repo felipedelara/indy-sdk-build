@@ -7,7 +7,7 @@ Cocoapod will search for spec files in the root Specs folder.
 
 Add pod to target:
     
-    pod 'libindy-objc'                
+    pod 'libindy-objc', "1.6.1"               
 
 # How to build
 
@@ -35,20 +35,24 @@ Add pod to target:
    export PKG_CONFIG_ALLOW_CROSS=1
    export CARGO_INCREMENTAL=1
    ```
-1. Edit script build-libindy-core-ios.sh: set the following variables to fit your environment:
+
+1. Edit script ios-build.sh located in the ci folder: set the following variables to fit your environment:
    
    ```
    export OPENSSL_DIR=/usr/local/Cellar/openssl/1.0.2k
    export EVERNYM_REPO_KEY=~/Documents/EvernymRepo
    export LIBINDY_POD_VERSION=0.0.1
    ```
-   OPENSSL_DIR - path to installed openssl library
+   OPENSSL_DIR - path to installed openssl library. Note that this path may be different in your machine.
    
    EVERNYM_REPO_KEY - path to file with private key to be authorized on deb server
    
    LIBINDY_POD_VERSION - version of libindy-core pod to be built
-1. Run the script. Validate the output that all goes well.
-1. Go to `Podspec` dir.
+
+1. Run "ci/ios-build.sh libindy x86_64-apple-ios". Validate the output that all goes well.
+
+1. Go to `Specs` dir.
+
 1. Create directory with name defined in LIBINDY_POD_VERSION:
    
    ```
