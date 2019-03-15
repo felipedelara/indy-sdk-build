@@ -13,8 +13,10 @@ package="$1"
 [ -z ${package} ] && exit 1
 
 export PKG_CONFIG_ALLOW_CROSS=1
-export OPENSSL_DIR=/usr/local/Cellar/openssl/1.0.2l
+export OPENSSL_DIR=/usr/local/Cellar/openssl/1.0.2q
 export POD_FILE_NAME=${package}.tar.gz
+export EVERNYM_REPO_KEY=~/Documents/EvernymRepo
+export LIBINDY_POD_VERSION=2.0.0
 
 echo "Build IOS POD started..."
 
