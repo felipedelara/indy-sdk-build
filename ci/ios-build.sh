@@ -20,7 +20,7 @@ export LIBINDY_POD_VERSION=2.0.0
 
 echo "Build IOS POD started..."
 
-TYPE="debug"
+TYPE="release"
 
 cd ${package}
 
